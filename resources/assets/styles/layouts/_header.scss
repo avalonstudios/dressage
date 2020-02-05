@@ -1,0 +1,26 @@
+// TODO: .banner .nav li {}
+// TODO: .banner .nav a {}
+
+.brand {
+  position: absolute;
+  clip: rect( 1px, 1px, 1px, 1px );
+}
+
+.custom-logo-link {
+  @include bp( 1, 1023 ) {
+    display: none;
+  }
+
+  &.small {
+    @include bp( 1 ) {
+      position: absolute;
+      top: 0;//13px;
+      left: 0;//20px;
+      display: block;
+    }
+
+    @include bp( 1024 ) {
+      display: none;
+    }
+  }
+}

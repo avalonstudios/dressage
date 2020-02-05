@@ -1,0 +1,41 @@
+.title-text {
+  @include bp( 1 ) {
+    @include half( padding, 53, 72, 71, 72, 2 );
+  }
+
+  @include bp( 1024 ) {
+    @include half( padding, 53, 36, 71, 36, 1 );
+  }
+
+  &-wrapper {
+    max-width: 904px;
+
+    @include center-block;
+  }
+}
+
+.text-only {
+  @include bp( 1 ) {
+    @include half( padding, 0, 36, 0, 36, 1 );
+  }
+
+  @include bp( 1024 ) {
+    // element, value, dividier
+    @include half1( padding, 0, 1 );
+  }
+
+  @include center-block;
+
+  max-width: 904px;
+  text-align: center;
+  line-height: 27px;
+
+  @include bp( 1 ) {
+    // element, value, dividier
+    @include half1( margin-top, 51, 2 );
+  }
+
+  @include bp( 1024 ) {
+    @include half1( margin-top, 51, 1 );
+  }
+}

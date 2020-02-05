@@ -1,0 +1,87 @@
+/** Search form */
+// TODO: .search-form {}
+// TODO: .search-form label {}
+// TODO: .search-form .search-field {}
+// TODO: .search-form .search-submit {}
+
+.main-navigation {
+  .header-search-form {
+    display: none;
+  }
+
+  .search {
+    &-btn {
+      padding: 13px 8px 13px 16px;
+      cursor: pointer;
+
+      @include colored-links( $blue, $lbrown, $blue );
+    }
+
+    &-form {
+      @include absmid( 'b' );
+
+      max-width: 1190px;
+      box-sizing: border-box;
+
+      @include bp( 1, 1023 ) {
+        max-width: 80%;
+      }
+
+      label {
+        @include bp( 1 ) {
+          padding: 0;
+          transition: transit( padding );
+        }
+      }
+
+      .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 1px 1px 0 0;
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        &.small {
+          @include bp( 1024 ) {
+            display: none;
+          }
+        }
+
+        &.btn-secondar {
+          float: left;
+          display: block;
+          color: white;
+          position: absolute;
+          margin-top: 20px;
+
+          @include bp( 1, 1023 ) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-field {
+      box-sizing: border-box;
+      padding: 20px;
+      width: 100%;
+      max-width: 1190px;
+
+      @include center-block;
+    }
+
+    &-submit {
+      display: none;
+    }
+  }
+
+  &.scrolled {
+    .search-btn {
+      @include bp( 1024 ) {
+        padding-top: 0;
+        margin-top: -5px;
+      }
+    }
+  }
+}

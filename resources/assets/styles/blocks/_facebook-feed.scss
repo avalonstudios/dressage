@@ -1,0 +1,19 @@
+.facebook-page-feed {
+  .fb-page-wrapper {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .crt {
+    &-widget {
+      position: relative;
+    }
+
+    &-logo {
+      bottom: 25px !important;
+      color: white !important;
+      font-family: $sans;
+    }
+  }
+}

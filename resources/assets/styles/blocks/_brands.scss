@@ -1,0 +1,50 @@
+.brands {
+  @include bp( 1 ) {
+    // element, top, right, bottom, left, dividier
+    @include half( padding, 26, 0, 90, 0, 1 );
+  }
+
+  @include bp( 1024 ) {
+    // element, top, right, bottom, left, dividier
+    @include half( padding, 55, 0, 121, 0, 1 );
+  }
+
+  .brands-slider-wrapper {
+    max-width: 1640px;
+
+    @include center-block;
+
+    @include bp( 1 ) {
+      padding: 0 20px;
+    }
+  }
+
+  .section-title {
+    @include bp( 1 ) {
+      // element, value, dividier
+      @include half1( margin-bottom, 42, 1 );
+    }
+
+    @include bp( 1024 ) {
+      // element, value, dividier
+      @include half1( margin-bottom, 82, 1 );
+    }
+  }
+
+  .brand {
+    &-slide {
+      position: relative;
+      display: table;
+      height: 75px;
+
+      .image {
+        display: table-cell;
+        vertical-align: middle;
+
+        img {
+          @include center-block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import 'common/mixins';
+@import 'common/normalize';
+@import 'common/variables';
+
+/** Import everything from autoload */
+@import './autoload/**/*';
+
+/** Import theme styles */
+@import 'common/global';
+@import 'components/wp-classes';
+
+/** ACF Block styles */
+@import 'blocks/_block-parts';
+
+.wp-block {
+  max-width: unset;
+}

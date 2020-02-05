@@ -1,0 +1,138 @@
+.products-slider {
+  padding-top: 48px;
+  padding-bottom: 80px;
+
+  &-wrappe {
+    max-width: 1640px;
+
+    @include center-block;
+
+    @include bp( 1, 1720 ) {
+      margin: 0 36px;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 46px;
+  }
+
+  .slick-track {
+    border-top: 1px solid rgba( $blue, 0.5 );
+    border-bottom: 1px solid rgba( $blue, 0.5 );
+  }
+
+  ul.products {
+    @extend .list-unstyled;
+
+    position: relative;
+
+    li.product {
+      position: relative;
+      border-right: 1px solid rgba( $blue, 0.5 );
+      box-sizing: border-box;
+      clear: none;
+      margin: 0;
+
+      &.last-active-slide {
+        border: 0;
+      }
+
+      a.woocommerce-loop-product__link {
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+        padding-bottom: 140px;
+        box-sizing: border-box;
+
+        @include center-block;
+
+        @include bp( 1 ) {
+          padding-left: 20px;
+          padding-right: 20px;
+          transition: transit( padding );
+        }
+
+        @include bp( 1360 ) {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+      }
+
+      img {
+        @include center-block;
+
+        height: auto;
+      }
+
+      .woocommerce-loop-product__title {
+        text-align: center;
+        font-size: 17px;
+        font-family: $sans;
+        text-transform: uppercase;
+        color: $dblue;
+      }
+
+      .price {
+        @include center-block;
+
+        text-align: center;
+        position: relative;
+
+        ins,
+        del,
+        .amount {
+          font-size: 20px;
+          line-height: 20px;
+          font-family: $sans;
+        }
+
+        ins,
+        .amount {
+          //text-decoration: none;
+          font-weight: 700;
+          color: $lbrown;
+        }
+
+        del .amount {
+          text-decoration: line-through;
+          color: $dblue;
+          position: absolute;
+          left: 18px;
+          font-weight: 300;
+          font-style: italic;
+        }
+      }
+
+      .button {
+        @extend .btn;
+        @extend .btn-primary;
+
+        @include absmid( 'h' );
+
+        bottom: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+        min-width: 170px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+.products-slider-four-wrapper {
+  max-width: 1295px;
+
+  @include center-block;
+
+  .section-title {
+    font-size: 23px;
+    line-height: 32px;
+    font-family: $sans;
+    color: $lbrown;
+    text-transform: none;
+
+    .has-deco {
+      border: 0;
+    }
+  }
+}

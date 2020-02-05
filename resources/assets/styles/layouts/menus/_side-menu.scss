@@ -1,0 +1,99 @@
+.side-menu {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  top: 0;
+  right: -300px;
+  color: $lbrown;
+  background-color: $dblue;
+  z-index: 3;
+  //overflow-y: scroll;
+  transition: transit( right );
+  padding: 50px 30px;
+  box-sizing: border-box;
+  border-left: 1px solid $lbrown;
+
+  .underlay {
+    opacity: 0;
+    transition: transit( opacity );
+  }
+
+  &.open {
+    right: 0;
+
+    .underlay {
+      display: block;
+      opacity: 1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba( $dblue, 0.5 );
+      z-index: -1;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .detail-wrapper {
+    position: relative;
+
+    .icon {
+      position: absolute;
+    }
+
+    a {
+      margin-left: 30px;
+
+      @include colored-links( $lbrown, white, $lbrown );
+    }
+  }
+
+  .phone-numbers {
+    margin-bottom: 30px;
+
+    .icon {
+      .fa-phone {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .email-addresses {
+    margin-bottom: 30px;
+
+    .icon {
+      font-size: 12px;
+      top: 3px;
+    }
+  }
+
+  #mapid {
+    @include bp( 1 ) {
+      height: 250px;
+    }
+
+    @include bp( 1024 ) {
+      height: 450px;
+    }
+  }
+
+  .social-side-menu {
+    margin-top: 30px;
+
+    a {
+      @include colored-links( $lbrown, white, $lbrown );
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import 'common/mixins';
+@import 'common/normalize';
+@import 'common/variables';
+
+/** Import everything from autoload */
+@import './autoload/**/*';
+
+/** Import theme styles */
+@import 'common/global';
+@import 'components/wp-classes';
+
+/** ACF Block styles */
+@import 'blocks/_block-parts';
+
+body {
+  &.login {
+    background-color: $dblue;
+
+    a {
+      @include colored-links( white, $brown, white );
+    }
+
+    #backtoblog {
+      a {
+        @include colored-links( white, $brown, white );
+      }
+    }
+
+    #reg_passmail {
+      color: white;
+    }
+
+    form {
+      background-color: transparent;
+      border: 0;
+
+      input {
+        border-radius: 0;
+      }
+
+      #wp-submit {
+        background-color: $brown;
+        border: 0;
+        border-radius: 0;
+        transition: transit( background-color );
+
+        &:hover {
+          background-color: $blue;
+        }
+      }
+    }
+
+    label {
+      color: white;
+    }
+  }
+
+  #login {
+    h1 {
+      a {
+        background-image: url( '../images/dgoldline-logo.png' );
+        width: unset;
+        background-size: unset;
+      }
+    }
+
+    .message {
+      &.register {
+        display: none;
+      }
+    }
+
+    #nav a {
+      @include colored-links( white, $brown, white );
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.btn {
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 16px 15px;
+  color: white;
+  transition: transit( background-color ), transit( color ), transit( border-color );
+  cursor: pointer;
+  display: inline-block;
+
+  &-primary {
+    background-color: $blue;
+
+    &:hover {
+      color: white;
+      background-color: $dblue;
+    }
+  }
+
+  &-secondary {
+    background-color: $lbrown;
+
+    &:hover {
+      color: white;
+      background-color: $mbrown;
+    }
+  }
+
+  &-outline {
+    border: 2px solid white;
+
+    &:hover {
+      border-color: $lbrown;
+    }
+  }
+}
+
+.three-lines {
+  display: inline-block;
+  width: 15px;
+  cursor: pointer;
+  transition: transit( padding );
+
+  @include bp( 1 ) {
+    padding: 18px 16px 18px 8px;
+  }
+
+  @include bp( 1024 ) {
+    padding: 36px 16px 36px 8px;
+  }
+
+  &:hover > div {
+    background-color: $lbrown;
+  }
+
+  .line {
+    display: block;
+    height: 2px;
+    background-color: $blue;
+    margin-bottom: 3px;
+    transform-origin: 0 50%;
+
+    &.l {
+      &-1,
+      &-2,
+      &-3 {
+        transition: transit( all );
+      }
+
+      &-3 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &:hover {
+    .l {
+      &-1 {
+        transform: rotate( 42.5deg );
+      }
+
+      &-2 {
+        visibility: hidden;
+      }
+
+      &-3 {
+        transform: rotate( -42.5deg );
+      }
+    }
+  }
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+.main-navigation.scrolled {
+  .three-lines {
+    @include bp( 1024 ) {
+      display: inline-block;
+      width: 15px;
+      cursor: pointer;
+      padding: 16px 16px 36px 8px;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.image-gallery {
+  &-wrapper {
+    max-width: 1190px;
+
+    @include center-block;
+
+    @include bp( 1, 1249 ) {
+      padding: 0 20px;
+    }
+  }
+
+  .gallery {
+    &-images-wrapper {
+      display: flex;
+      flex-flow: row wrap;
+
+      &.split {
+        &-2 {
+          .gallery-image {
+            @include bp( 1024 ) {
+              width: 50%;
+            }
+          }
+        }
+
+        &-3 {
+          .gallery-image {
+            @include bp( 1024 ) {
+              width: 33.3333333%;
+            }
+          }
+        }
+
+        &-4 {
+          .gallery-image {
+            @include bp( 1024 ) {
+              width: 25%;
+            }
+          }
+        }
+
+        &-5 {
+          .gallery-image {
+            @include bp( 1024 ) {
+              width: 20%;
+            }
+          }
+        }
+      }
+    }
+
+    &-image {
+      a {
+        display: block;
+      }
+
+      figure {
+        display: block;
+        padding: 0 5px;
+        position: relative;
+
+        &:hover > figcaption {
+          opacity: 1;
+          top: 0;
+        }
+
+        picture {
+          display: block;
+        }
+
+        figcaption {
+          opacity: 0;
+          position: absolute;
+          overflow: hidden;
+          top: 100%;
+          bottom: 5px;
+          padding: 5px;
+          line-height: 1.2;
+          width: 25%;
+          font-family: $sans;
+          font-size: 12px;
+          color: white;
+          transition: transit( opacity ), transit( top );
+          backdrop-filter: blur( 4px );
+
+          @supports not ( backdrop-filter: blur( 4px ) ) {
+            background-color: rgba( black, 0.75 );
+          }
+        }
+      }
+    }
+
+    &-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background-color: rgba( black, 0.9 );
+
+      .close-slider {
+        position: absolute;
+
+        @include bp( 1 ) {
+          bottom: -70px;
+          background-color: rgba( $lbrown, 0.5 );
+          width: 150px;
+        }
+
+        @include bp( 1024 ) {
+          bottom: 0;
+          background-color: rgba( black, 0.5 );
+        }
+
+        @include absmid( 'h' );
+      }
+    }
+
+    &-slider-wrapper {
+      @include absmid( 'b' );
+    }
+
+    &-image-slide {
+      padding: 0 50px;
+    }
+
+    &-modal-slider {
+      img {
+        @include center-block;
+
+        @include bp( 1 ) {
+          width: 100%;
+        }
+
+        @include bp( 1024 ) {
+          width: 80%;
+        }
+      }
+
+      .custom-slick-arrow {
+        @include bp( 1, 1024 ) {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

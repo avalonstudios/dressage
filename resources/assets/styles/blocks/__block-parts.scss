@@ -1,0 +1,28 @@
+@import 'hero-images';
+@import 'facebook-feed';
+@import 'image-gallery';
+@import 'products-slider';
+@import 'why-us-services';
+@import 'blue-bar';
+@import 'latest-posts';
+@import 'brands';
+@import 'title-text-only';
+@import 'why-us-only';
+@import 'services-only';
+@import 'contact-form';
+@import 'single-post-slider';
+
+.ava-block {
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 58px;
+  letter-spacing: 0;
+  color: $blue;
+  text-align: center;
+}

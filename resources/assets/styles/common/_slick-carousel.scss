@@ -1,0 +1,48 @@
+.custom-slick {
+  &-arrow {
+    position: absolute;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: transit( opacity );
+    cursor: pointer;
+  }
+
+  &-prev,
+  &-next {
+    background-color: rgba( black, 0.5 );
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::before {
+      color: white;
+      font-family: $sans;
+      font-size: 80px;
+      font-weight: 700;
+
+      @include absmid( 'v' );
+    }
+  }
+
+  &-prev {
+    left: 0;
+
+    &::before {
+      content: '<';
+      left: 50%;
+    }
+  }
+
+  &-next {
+    right: 0;
+
+    &::before {
+      content: '>';
+      right: 50%;
+    }
+  }
+}

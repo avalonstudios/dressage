@@ -1,0 +1,125 @@
+.services-only {
+  @include bp( 1 ) {
+    // element, top, right, bottom, left, dividier
+    // element, value, dividier
+    @include half1( padding-top, 61, 2 );
+  }
+
+  @include bp( 1024 ) {
+    // element, top, right, bottom, left, dividier
+    // element, value, dividier
+    @include half1( padding-top, 61, 1 );
+  }
+
+  .text-only {
+    @include bp( 1 ) {
+      @include half1( padding-bottom, 51 , 2 );
+    }
+
+    @include bp( 1024 ) {
+      // element, value, dividier
+      @include half1( padding-bottom, 51, 1 );
+    }
+  }
+
+  .services {
+    &-section {
+      position: relative;
+
+      .title-background {
+        @include bp( 1, 1023 ) {
+          margin-bottom: ( 33 - 12 ) * 1px;
+        }
+
+        @include bp( 1024 ) {
+          @include half1( top, 95, 2 );
+
+          position: absolute;
+          z-index: 2;
+          margin: 0;
+          left: -24px;
+        }
+
+        @include bp( 1440 ) {
+          @include half1( top, 95, 1 );
+        }
+      }
+
+      .section-title {
+        margin-top: 12px;
+
+        @include bp( 1024 ) {
+          margin: 0;
+        }
+      }
+
+      .service-slide {
+        @include bp( 1 ) {
+          height: 360px;
+          position: relative;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+        }
+
+        @include bp( 1024 ) {
+          padding: 40px;
+          box-sizing: border-box;
+          height: 100%;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: $lbrown;
+          mix-blend-mode: multiply;
+
+          @supports not ( mix-blend-mode: multiply ) {
+            background-color: rgba( $lbrown, 0.7 );
+          }
+        }
+      }
+
+      .title {
+        @include absmid( 'b' );
+
+        margin: 0;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 49px;
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+        z-index: 2;
+
+        @include bp( 1024 ) {
+          padding: 0 20px;
+          box-sizing: border-box;
+        }
+      }
+    }
+
+    &-images {
+      @include bp( 1024 ) {
+        display: flex;
+      }
+
+      .service {
+        &-slide {
+          @include bp( 1, 1023 ) {
+            min-width: 100%;
+          }
+
+          @include bp( 1024 ) {
+            width: 50%;
+            min-height: 614px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@mixin crules( $l ) {
+  &:hover::after {
+    content: '';
+    display: inline-block;
+    position: fixed;
+    top: 100px;
+    left: $l;
+    box-shadow: 5px 7px 20px 3px rgba( black, 0.5 );
+    z-index: 999999;
+  }
+}
+
+@mixin irule( $section, $img, $width, $height) {
+  .editor-block-list-item {
+    &-acf-#{$section} {
+      @include crules( 400px );
+
+      &:hover::after {
+        background: url( '../images/helper-images/#{$img}.jpg' );
+        width: $width * 1px;
+        height: $height * 1px;
+      }
+    }
+  }
+
+  div[data-type='acf/#{$section}'] .acf-accordion:not(.-open) .acf-accordion-title {
+    @include crules( 50% );
+
+    &:hover::after {
+      background: url( '../images/helper-images/#{$img}.jpg' );
+      width: $width * 1px;
+      height: $height * 1px;
+    }
+  }
+}
+
+@include irule( 'hero-image-slider',          'hero-image-slider',          384, 167 );
+@include irule( 'shop-3-categories-single-image',      'shop-3-categories-single-image',        384, 55 );
+//@include irule( 'map-points-block',           'map-points-block',           576, 348 );

@@ -1,0 +1,43 @@
+.social {
+  &-menu {
+    display: inline-block;
+
+    @include bp( 1 ) {
+      margin-right: 0;
+    }
+
+    @include bp( 1024 ) {
+      margin-right: 20px;
+    }
+
+    &.social-small-menu {
+      .social-links {
+        margin-top: 10px;
+      }
+
+      @include bp( 1024 ) {
+        display: none;
+      }
+    }
+  }
+
+  &-header {
+    @include bp( 1, 1023 ) {
+      display: none;
+    }
+  }
+
+  &-links {
+    list-style-type: none;
+  }
+
+  &-item {
+    display: inline-block;
+
+    a {
+      padding: 5px;
+
+      @include colored-links( $blue, $lbrown, $blue );
+    }
+  }
+}

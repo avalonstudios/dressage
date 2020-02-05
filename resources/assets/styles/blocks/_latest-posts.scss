@@ -1,0 +1,80 @@
+.latest-posts {
+  position: relative;
+
+  .read-more {
+    display: none;
+  }
+
+  .grey-grad {
+    @include grey_grad();
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 284px;
+    left: 0;
+    z-index: -1;
+  }
+
+  &-wrapper {
+    @include center-block;
+
+    @include bp( 1 ) {
+      max-width: 826px;
+    }
+
+    @include bp( 1024 ) {
+      max-width: 1364px;
+    }
+  }
+
+  @include bp( 1 ) {
+    // element, top, right, bottom, left, dividier
+    @include half( padding, 27, 20, 52, 20, 1 );
+  }
+
+  .section-title {
+    @include bp( 1 ) {
+      @include half1( margin-bottom, 27, 1 );
+    }
+
+    @include bp( 1024 ) {
+      @include half1( margin-bottom, 51, 1 );
+    }
+  }
+
+  .post {
+    @include bp( 1024 ) {
+      float: left;
+      box-sizing: border-box;
+    }
+
+    @include bp( 1024, 1433 ) {
+      width: 45%;
+    }
+  }
+
+  .post-num-2 {
+    @include bp( 1 ) {
+      // element, value, dividier
+      @include half1( margin-bottom, 46, 1 );
+    }
+
+    @include bp( 1024 ) {
+      // element, value, dividier
+      @include half1( margin-left, 76, 2 );
+
+      float: right;
+    }
+
+    @include bp( 1433 ) {
+      @include half1( margin-left, 76, 1 );
+    }
+  }
+
+  .btn-wrap {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+}

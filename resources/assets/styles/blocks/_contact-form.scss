@@ -1,0 +1,173 @@
+.contact-form {
+  &-wrapper {
+    float: left;
+    width: 100%;
+  }
+
+  .flex-wrapper {
+    @include bp( 1024, 1439 ) {
+      display: flex;
+    }
+  }
+
+  .keen-contact-form {
+    background-color: $lbrown;
+
+    @include bp( 1 ) {
+      @include half( padding, 72, 77, 72, 77, 2 );
+    }
+
+    @include bp( 1024 ) {
+      @include half( padding, 72, 77, 72, 77, 1 );
+
+      width: 50%;
+      float: right;
+      box-sizing: border-box;
+    }
+
+    label.frm_primary_label {
+      display: none !important;
+    }
+
+    .frm_style_formidable-style.with_frm_style .form-field {
+      margin-bottom: 24px;
+    }
+
+    .confirm_checkbox label,
+    input[type='checkbox'] {
+      font-size: 10px !important;
+      line-height: 15px !important;
+      color: $blue !important;
+    }
+
+    .frm_form_field {
+      input,
+      textarea {
+        box-shadow: 2px 2px 5px rgba( 0, 0, 0, 0.15 );
+      }
+    }
+  }
+
+  .location-address {
+    @include bp( 1 ) {
+      width: 70%;
+
+      @include center-block;
+      //@include half( padding, 72, 141, 64, 278, 2 );
+      @include half( padding, 72, 0, 64, 0, 2 );
+    }
+
+    @include bp( 1024 ) {
+      @include half( padding, 72, 0, 0, 0, 1 );
+    }
+
+    @include bp( 1024 ) {
+      float: left;
+      width: 50%;
+    }
+
+    .contact-form-title {
+      font-size: 23px;
+      line-height: 32px;
+      font-family: $sans;
+      color: $lbrown;
+      margin: 0;
+      margin-bottom: 21px;
+    }
+
+    .contact-form-text {
+      @include bp( 1 ) {
+        @include half1( margin-bottom, 67, 2 );
+      }
+
+      @include bp( 1024 ) {
+        @include half1( margin-bottom, 67, 1 );
+      }
+    }
+
+    .contact-opening {
+      max-width: 539px;
+
+      @include bp( 1024 ) {
+        float: right;
+        width: 70%;
+
+        // element, value, dividier
+        @include half1( margin-right, 141, 3 );
+      }
+
+      @include bp( 1440 ) {
+        width: 80%;
+
+        @include half1( margin-right, 141, 2 );
+      }
+
+      @include bp( 1550 ) {
+        @include half1( margin-right, 141, 1 );
+      }
+    }
+
+    .phone-numbers,
+    .email-addresses,
+    .brick-address,
+    .opening-hours {
+      position: relative;
+
+      @include bp( 1 ) {
+        // element, value, dividier
+        @include half1( margin-bottom, 75, 2 );
+      }
+
+      @include bp( 1024 ) {
+        @include half1( margin-bottom, 75, 1 );
+      }
+
+      @include bp( 1440 ) {
+        max-width: 50%;
+        flex-grow: 1;
+      }
+    }
+
+    .shop-details {
+      @include bp( 1440 ) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+      }
+    }
+
+    .icon {
+      position: absolute;
+    }
+
+    .contact-detail {
+      display: block;
+      margin-left: ( 34 + 25 ) * 1px;
+    }
+
+    .brick-address {
+      width: 190px;
+
+      address {
+        line-height: 25px;
+      }
+    }
+
+    .opening-hours {
+      .days {
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 21px;
+      }
+
+      .contact-details {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  #mapid_ {
+    float: left;
+    width: 100%;
+  }
+}

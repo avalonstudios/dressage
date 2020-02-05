@@ -1,0 +1,19 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  //color: $blue;
+  font-family: $serif;
+  letter-spacing: 0;
+  line-height: 22px;
+  overflow-x: hidden;
+
+  @include font-size(1);
+  //line-height: $font__line-height-body;
+}
+
+pre {
+  white-space: pre-wrap;
+}

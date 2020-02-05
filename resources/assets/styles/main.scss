@@ -1,0 +1,32 @@
+@import 'common/mixins';
+@import 'common/normalize';
+@import 'common/variables';
+
+/** Import everything from autoload */
+@import './autoload/**/*';
+
+// Import Leaflet JS
+@import '~leaflet/dist/leaflet.css';
+
+// Import Slick
+@import '~slick-carousel/slick/slick.scss';
+@import '~slick-carousel/slick/slick-theme.scss';
+
+// Import Slick
+@import '~animate.css/animate.css';
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import '~some-node-module';
+
+/** Import theme styles */
+@import 'common/common';
+@import 'components/components';
+@import 'layouts/layouts';
+
+/** ACF Block styles */
+@import 'blocks/_block-parts';

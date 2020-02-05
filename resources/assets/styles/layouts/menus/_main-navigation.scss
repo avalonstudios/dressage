@@ -1,0 +1,274 @@
+.main-navigation {
+  float: left;
+  width: 100%;
+  background-color: rgba( white, 0.5 );
+  backdrop-filter: blur( 6px );
+  position: fixed;
+  top: 0;
+  padding: 16px 0 16px 16px;
+  box-sizing: border-box;
+  z-index: 2;
+  transition: transit( padding );
+
+  &-wrapper {
+    @include center-block;
+
+    max-width: 1190px;
+  }
+
+  &.search-open {
+    @include bp( 1 ) {
+      height: 80px;
+    }
+
+    @include bp( 1024 ) {
+      height: 117px;
+    }
+  }
+
+  &.footer {
+    display: none;
+    bottom: 0;
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      @include colored-links( white, $lbrown, white );
+    }
+
+    &.open {
+      display: block;
+      z-index: 9999;
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &.scrolled {
+    @include bp( 1024 ) {
+      padding-bottom: 0;
+
+      .custom-logo-link {
+        visibility: hidden;
+
+        img {
+          height: 0;
+        }
+      }
+
+      .custom-logo-link.small {
+        display: block;
+        visibility: visible;
+        height: unset;
+
+        img {
+          height: unset;
+        }
+      }
+
+      .nav-primary {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .menu-btn {
+    display: inline-block;
+    float: right;
+    padding: 15px 0;
+    cursor: pointer;
+    line-height: 1;
+
+    @include colored-links( $blue, $lbrown, $blue );
+
+    @include bp( 1024 ) {
+      display: none;
+    }
+  }
+
+  .nav-primary,
+  .search-btn,
+  .three-lines {
+    display: inline-block;
+  }
+
+  .side {
+    &-left,
+    &-right {
+      position: relative;
+
+      @include bp( 1024 ) {
+        align-items: center;
+      }
+    }
+
+    &-left {
+      float: left;
+
+      @include bp( 1 ) {
+        width: 50%;
+      }
+
+      @include bp( 1024 ) {
+        width: 70%;
+      }
+    }
+
+    &-right {
+      display: flex;
+      justify-content: flex-end;
+
+      @include bp( 1 ) {
+        width: 50%;
+      }
+
+      @include bp( 1024 ) {
+        width: 30%;
+      }
+    }
+  }
+
+  .nav-primary {
+    @include bp( 1, 1023 ) {
+      //display: none;
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      left: -300px;
+      width: 300px;
+      height: 100%;
+      background-color: white;
+      //backdrop-filter: blur( 6px );
+      overflow-y: scroll;
+      transition: transit( left );
+
+      .underlay {
+        opacity: 0;
+        transition: transit( opacity );
+      }
+
+      &.open {
+        left: 0;
+      }
+
+      .nav {
+        padding: 0 0 50px 40px;
+
+        li {
+          display: block;
+
+          a {
+            display: block;
+            padding: 10px 0;
+          }
+        }
+      }
+
+      .close {
+        position: sticky;
+        top: 0;
+        color: $blue;
+      }
+    }
+
+    @include bp( 1024 ) {
+      @include absmid( 'v' );
+
+      width: 100%;
+      margin-left: 40px;
+    }
+
+    text-transform: uppercase;
+
+    @include bp( 1024 ) {
+      ul {
+        padding-left: 0;
+
+        ul {
+          display: none;
+        }
+
+        li:hover > ul {
+          display: block;
+          position: absolute;
+          top: 40px;
+          left: 0;
+          width: 200px;
+          background-color: rgba( white, 0.75 );
+
+          li {
+            display: block;
+
+            &:hover > ul {
+              top: 0;
+              left: 100%;
+            }
+          }
+        }
+      }
+
+      ul.sub-menu {
+        li {
+          padding: 0;
+
+          a {
+            display: block;
+            padding: 10px 8px;
+            background-color: transparent;
+            transition: transit( all );
+
+            &:hover {
+              background-color: rgba( $blue, 0.05 );
+            }
+          }
+        }
+      }
+
+      li {
+        display: inline;
+        position: relative;
+        padding: 0 8px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        a {
+          padding: 30px 0;
+        }
+      }
+
+      .close {
+        @include bp( 1024 ) {
+          display: none;
+        }
+      }
+    }
+
+    a {
+      @include colored-links( $blue, $lbrown, $blue );
+    }
+  }
+
+  .underlay {
+    display: none;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba( $dblue, 0.5 );
+    z-index: -1;
+
+    @include bp( 1024 ) {
+      display: none;
+    }
+  }
+}

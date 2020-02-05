@@ -1,0 +1,5 @@
+a {
+  text-decoration: none;
+
+  @include colored-links( $blue, $lbrown, $mbrown );
+}

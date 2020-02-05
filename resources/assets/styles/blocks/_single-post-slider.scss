@@ -1,0 +1,36 @@
+.keen-block.post-slider {
+  float: none;
+  width: 100%;
+  clear: both;
+  margin: 26px 0 38px;
+
+  .single-post-slider {
+    max-width: 720px;
+
+    @include center-block;
+
+    .custom-slick {
+      &-arrow {
+        &.arrows-blue {
+          &.custom-slick {
+            &-prev,
+            &-next {
+              bottom: unset;
+
+              @include absmid( 'v' );
+            }
+
+            &-prev {
+              left: -21px;
+            }
+
+            &-next {
+              right: -21px;
+              left: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}
