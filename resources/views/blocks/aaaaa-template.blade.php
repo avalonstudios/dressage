@@ -1,7 +1,7 @@
 {{--
   Title: _Template Block
   Description: Hero images
-  Category: keen_block_category
+  Category: ava_block_category
   Icon: admin-comments
   Keywords: hero, images
   Mode: edit

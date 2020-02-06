@@ -1,7 +1,7 @@
 {{--
   Title: Hero Images
   Description: Display Team Block
-  Category: keen_block_category
+  Category: ava_block_category
   Icon: admin-comments
   Keywords: team, our, members
   Mode: edit
@@ -36,7 +36,6 @@ $componentVars = [
 ];
 @endphp
 
-<div class="hero-spacer"></div>
 @component( 'comps.blocks.blocks', $componentVars )
   <div class="hero-slides-wrapper">
     <div class="hero-slides">
@@ -62,9 +61,11 @@ $componentVars = [
         $btnTarget  = $link[ 'target' ];
         @endphp
         <div class="hero-slide">
-          <div class="title">{{ $title }}</div>
-          <div class="text">{{ $text }}</div>
-          @include( 'partials.buttons.btn' )
+          <div class="hero-slide-wrapper">
+            <div class="title">{{ $title }}</div>
+            <div class="text">{{ $text }}</div>
+            @include( 'partials.buttons.btn' )
+          </div>
         </div>
       @endforeach
     </div>

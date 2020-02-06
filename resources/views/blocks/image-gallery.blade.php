@@ -1,7 +1,7 @@
 {{--
   Title: Image Gallery
   Description: Image Gallery
-  Category: keen_block_category
+  Category: ava_block_category
   Icon: admin-comments
   Keywords: image, gallery
   Mode: edit

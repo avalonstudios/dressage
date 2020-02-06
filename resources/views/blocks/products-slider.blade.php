@@ -1,7 +1,7 @@
 {{--
   Title: Products Slider
   Description: Products slider
-  Category: keen_block_category
+  Category: ava_block_category
   Icon: admin-comments
   Keywords: products, slider
   Mode: edit

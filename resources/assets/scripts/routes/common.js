@@ -40,6 +40,7 @@ export default {
     setTimeout( function( ) {
       doHeroSlider(  );
       doProductsSlider(  );
+      doLatestPostsSlider(  );
     }, 500 );
   },
 };
@@ -210,4 +211,23 @@ function doProductsSlider(  ) {
   } );
 
   $slides.slick( theSlider );
+}
+
+function doLatestPostsSlider(  ) {
+  var settings = {
+    dots: false,
+    arrows: true,
+    nextArrow: '<div class="custom-slick-arrow custom-slick-next arrows-blue circled"></div>',
+    prevArrow: '<div class="custom-slick-arrow custom-slick-prev arrows-blue circled"></div>',
+    infinite: true,
+    speed: 700,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
+  let $slides = $( '.latest-posts .posts-wrapper' );
+
+  $slides.slick( settings );
 }

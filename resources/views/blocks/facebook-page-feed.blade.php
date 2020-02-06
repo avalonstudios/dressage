@@ -1,7 +1,7 @@
 {{--
   Title: Facebook Page Feed
   Description: Facebook Page Feed
-  Category: keen_block_category
+  Category: ava_block_category
   Icon: admin-comments
   Keywords: facebook, page, feed
   Mode: edit
@@ -68,13 +68,4 @@ $componentVars = [
   </div>
   <!-- Place <div> tag where you want the feed to appear -->
   <div id="curator-feed-default-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
-  <!-- The Javascript can be moved to the end of the html page before the </body> tag -->
-  <script type="text/javascript">
-  /* curator-feed-default-layout */
-  (function(){
-  var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
-  i.src = "https://cdn.curator.io/published/98e53c40-bcbc-43b8-aa94-ac2d411edbcf.js";
-  e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
-  })();
-  </script>
 @endcomponent

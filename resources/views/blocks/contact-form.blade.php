@@ -1,7 +1,7 @@
 {{--
   Title: Contact Form
   Description: Contact form
-  Category: keen_block_category
+  Category: ava_block_category
   Icon: admin-comments
   Keywords: contact, form
   Mode: edit

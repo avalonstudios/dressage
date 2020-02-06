@@ -27,16 +27,20 @@
     &-slides-content {
       @include absmid( 'b' );
 
-      max-width: 1190px;
-
       .hero-slide {
-        color: white;
-        backdrop-filter: blur( 1px );
-        text-align: center;
-        padding: 30px 20px;
-        margin: 0 20px;
-        line-height: 1;
-        box-sizing: border-box;
+        &-wrapper {
+          color: white;
+          backdrop-filter: blur( 3px );
+          background-color: rgba( black, 0.2 );
+          text-align: center;
+          padding: 40px;
+          margin: 0 20px;
+          line-height: 1;
+          box-sizing: border-box;
+          max-width: 1190px;
+
+          @include center-block;
+        }
 
         .title {
           text-transform: uppercase;

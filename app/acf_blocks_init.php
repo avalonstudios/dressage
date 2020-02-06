@@ -1,13 +1,13 @@
 <?php
 
-function keen_block_category( $categories, $post ) {
+function ava_block_category( $categories, $post ) {
     return array_merge(
         $categories,
         [
             [
-                'slug'  => 'keen_block_category',
+                'slug'  => 'ava_block_category',
                 'title' => __( 'Custom Blocks', 'keen_block' ),
             ],
         ]
     );
-} add_filter( 'block_categories', 'keen_block_category', 10, 2);
+} add_filter( 'block_categories', 'ava_block_category', 10, 2);

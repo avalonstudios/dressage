@@ -6,6 +6,7 @@
   transition: transit( background-color ), transit( color ), transit( border-color );
   cursor: pointer;
   display: inline-block;
+  text-align: center;
 
   &-primary {
     background-color: $blue;
