@@ -13,17 +13,19 @@ if ( !$thumb ) {
 
 <article {{ post_class( '', $postID ) }}>
   <div class="article-slide-wrapper">
-    <div class="post-thumbnail{{ $noThumb }}">
-      @if ( $thumb )
-        <img src="{{ $thumb }}" alt="">
-      @endif
-    </div>
-    <header>
-      <div class="post-content">
-        <h1 class="post-title">{{ $ppost->post_title }}</h1>
-        @include('partials/entry-meta')
-        <div class="entry-content">{!! $postExcerpt !!}</div>
+    <div class="article-slide-width">
+      <div class="post-thumbnail{{ $noThumb }}">
+        @if ( $thumb )
+          <img src="{{ $thumb }}" alt="">
+        @endif
       </div>
-    </header>
+      <header>
+        <div class="post-content">
+          <h2 class="post-title">{{ $ppost->post_title }}</h2>
+          @include('partials/entry-meta')
+          <div class="entry-content">{!! $postExcerpt !!}</div>
+        </div>
+      </header>
+    </div>
   </div>
 </article>

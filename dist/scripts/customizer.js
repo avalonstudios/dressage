@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "eb1307ab4091a6fa62f2"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "519d114f096c65a4b07f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -722,7 +722,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(42)(__webpack_require__.s = 42);
+/******/ 	return hotCreateRequire(43)(__webpack_require__.s = 43);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -2359,7 +2359,8 @@ module.exports = function(hash, moduleMap, options) {
 /* 39 */,
 /* 40 */,
 /* 41 */,
-/* 42 */
+/* 42 */,
+/* 43 */
 /*!***************************************************************************!*\
   !*** multi ./build/util/../helpers/hmr-client.js ./scripts/customizer.js ***!
   \***************************************************************************/
@@ -2368,11 +2369,11 @@ module.exports = function(hash, moduleMap, options) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! G:\laragon\www\clients\dressage\wp-content\themes\dressage\resources\assets\build\util/../helpers/hmr-client.js */2);
-module.exports = __webpack_require__(/*! ./scripts/customizer.js */43);
+module.exports = __webpack_require__(/*! ./scripts/customizer.js */44);
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /*!*******************************!*\
   !*** ./scripts/customizer.js ***!
   \*******************************/

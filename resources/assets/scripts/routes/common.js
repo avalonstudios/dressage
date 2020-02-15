@@ -30,6 +30,11 @@ export default {
       }
     } );
 
+
+    $( window ).on( 'resize', (  ) => {
+      doNoImage(  );
+    } );
+
     $( window ).on( 'scroll', (  ) => {
       // close stuff on scroll
       underlaySideMenu(  );
@@ -38,12 +43,22 @@ export default {
     } );
 
     setTimeout( function( ) {
+      doNoImage(  );
       doHeroSlider(  );
       doProductsSlider(  );
       doLatestPostsSlider(  );
     }, 500 );
   },
 };
+
+function doNoImage(  ) {
+  let $noImage = $( '.no-image' );
+  $noImage.each( function(  ) {
+    let width = $( this ).outerWidth(  );
+    let height = Math.round( width / 1.618 );
+    $( this ).height( height );
+  } );
+}
 
 function doHeroSlider(  ) {
   var heroSlider = {
