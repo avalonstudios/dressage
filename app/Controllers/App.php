@@ -47,4 +47,9 @@ class App extends Controller
     {
         return get_fields();
     }
+
+    public static function getBlogLink()
+    {
+        return get_permalink( get_option( 'page_for_posts' ) );
+    }
 }

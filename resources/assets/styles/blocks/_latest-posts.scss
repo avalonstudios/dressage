@@ -55,6 +55,10 @@
         }
 
         &-thumbnail {
+          @include bp( 1024 ) {
+            margin-bottom: 0;
+          }
+
           img {
             @include center-block;
           }
@@ -69,6 +73,10 @@
         @include bp( 1024 ) {
           width: 48%;
           margin-left: 20px;
+        }
+
+        .btn {
+          margin-top: 20px;
         }
       }
     }

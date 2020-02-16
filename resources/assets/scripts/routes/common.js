@@ -32,7 +32,9 @@ export default {
 
 
     $( window ).on( 'resize', (  ) => {
-      doNoImage(  );
+      setTimeout( function(  ) {
+        doNoImage(  );
+      }, 250 )
     } );
 
     $( window ).on( 'scroll', (  ) => {
@@ -160,8 +162,10 @@ function addClassToMenu(  ) {
 
   if ( scroll > 0 ) {
     $( '.main-navigation' ).addClass( 'scrolled' );
+    $( '.wrap.container' ).addClass( 'scrolled' );
   } else {
     $( '.main-navigation' ).removeClass( 'scrolled' );
+    $( '.wrap.container' ).removeClass( 'scrolled' );
   }
 }
 

@@ -5,6 +5,8 @@ $postExcerpt = get_the_excerpt( $postID );
 $thumb = get_the_post_thumbnail_url( $postID, 'full' );
 $thumb = aq_resize( $thumb, 550, 340, true, true, true );
 
+$link = get_the_permalink( $postID );
+
 $noThumb = '';
 if ( !$thumb ) {
   $noThumb = ' no-image';
@@ -25,6 +27,14 @@ if ( !$thumb ) {
           @include('partials/entry-meta')
           <div class="entry-content">{!! $postExcerpt !!}</div>
         </div>
+        @include (
+          'comps.btns.btn',
+          [
+            'btnTitle'  => 'read more',
+            'btnLink'   => $link,
+            'btnType'   => 'outline',
+          ]
+        )
       </header>
     </div>
   </div>

@@ -7,6 +7,9 @@ $args = [
 $pposts = get_posts( $args );
 @endphp
 
-<div class="footer-latest-posts">
-  @each( 'comps.post-secs.footer-latest-posts', $pposts, 'ppost' )
+<div class="widget footer-latest-posts">
+  <h3 class="widget-title">Latest Posts</h3>
+  <div class="widget-body">
+    @each( 'comps.post-secs.footer-latest-posts', $pposts, 'ppost' )
+  </div>
 </div>
