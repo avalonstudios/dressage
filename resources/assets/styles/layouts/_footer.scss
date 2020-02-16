@@ -1,11 +1,75 @@
-.underlay.open {
-  display: block;
-  opacity: 1;
-  position: fixed;
-  top: 0;
-  left: 0;
+@import 'footer-widgets/latest-posts';
+
+footer {
+  background-color: $dblue;
+  float: left;
   width: 100%;
-  height: 100%;
-  background-color: rgba( $dblue, 0.5 );
-  z-index: 1;
+
+  @include bp( 1 ) {
+    @include half( padding, 60, 40, 60, 40, 2 );
+  }
+
+  @include bp( 1220 ) {
+    @include half( padding, 60, 0, 30, 0, 1 );
+  }
+
+  color: white;
+
+  a {
+    @include colored-links( white, $lbrown, white );
+  }
+
+  .container {
+    max-width: 1190px;
+
+    @include center-block;
+  }
+
+  ul,
+  ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-widgets {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    clear: both;
+  }
+
+  .widget-title {
+    margin-bottom: 20px;
+  }
+
+  .footer-credits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-wrapper {
+      border-top: 1px solid $dbrown;
+      margin-top: 30px;
+      padding-top: 30px;
+    }
+
+    &-width {
+      max-width: 1190px;
+
+      @include center-block;
+    }
+  }
+
+  .underlay.open {
+    display: block;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba( $dblue, 0.5 );
+    z-index: 1;
+  }
 }

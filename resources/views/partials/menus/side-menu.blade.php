@@ -1,5 +1,5 @@
 @php
-$contactDetails   = $getoptions[ 'contact_details' ];
+$contactDetails   = $opts[ 'contact_details' ];
 $phones           = $contactDetails[ 'phone_numbers' ];
 $emails           = $contactDetails[ 'emails' ];
 $lat              = $contactDetails[ 'location_latitude' ];

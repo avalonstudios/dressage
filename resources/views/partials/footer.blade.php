@@ -1,6 +1,20 @@
+@php
+$opts = $getoptions;
+@endphp
+
 <footer class="content-info">
   <div class="container">
-    @php dynamic_sidebar('sidebar-footer') @endphp
+    @include( 'widgets.footer-widgets' )
+  </div>
+  <div class="sep"></div>
+  <div class="footer-credits-wrapper">
+    <div class="footer-credits-width">
+      <div class="footer-credits">
+        <a href="{{ get_home_url(  ) }}" class="custom-logo-link small footer-logo" rel="home"><img src="@asset( 'images/logo-small.png' )" class="custom-logo small-logo" alt="Mediterranean Academy of Classical Dressage"></a>
+        <div class="copyright">&copy; {{ date( 'Y' ) }} {{ get_bloginfo( 'name' ) }}</div>
+        @include ( 'partials.menus.social-menu', [ 'position' => 'footer-menu' ] )
+      </div>
+    </div>
   </div>
 </footer>
 
