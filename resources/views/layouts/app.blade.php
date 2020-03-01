@@ -10,8 +10,9 @@ $fullWidth = $getfields[ 'full_width' ];
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0&appId=467256806658626&autoLogAppEvents=1"></script>
     @php do_action('get_header') @endphp
     @include('partials.header')
-    <div class="wrap container{{ $fullWidth ? ' full-width' : '' }}" role="document">
+    <div class="wrap container{{ $fullWidth ? ' full-width' : ' boxed' }}" role="document">
       <div class="content">
+        @include('partials.page-header')
         <main class="main">
           @yield('content')
         </main>

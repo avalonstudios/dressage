@@ -1,4 +1,48 @@
 .woocommerce {
+  &.woocommerce-page {
+    main.main {
+      max-width: 1190px;
+
+      @include center-block;
+    }
+
+    ul.products {
+      display: flex;
+      flex-flow: row wrap;
+
+      li.product {
+        @include bp( 1, 499 ) {
+          width: 100%;
+          border-right: 0;
+        }
+
+        @include bp( 500, 767 ) {
+          width: 50%;
+
+          &:nth-child(2n + 0) {
+            border-right: 0;
+          }
+        }
+
+        @include bp( 768, 1199 ) {
+          width: 33.33333%;
+
+          &:nth-child(3n + 0) {
+            border-right: 0;
+          }
+        }
+
+        @include bp( 1200 ) {
+          width: 25%;
+
+          &:nth-child(4n + 0) {
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
+
   ul.products {
     @extend .list-unstyled;
 
@@ -8,8 +52,8 @@
       position: relative;
       border-right: 1px solid rgba( $blue, 0.5 );
       box-sizing: border-box;
-      clear: none !important;
       margin: 0;
+      clear: none !important;
 
       &.last-active-slide {
         border: 0;
@@ -27,19 +71,13 @@
         @include bp( 1 ) {
           padding-left: 20px;
           padding-right: 20px;
-          transition: transit( padding );
-        }
-
-        @include bp( 1360 ) {
-          padding-left: 40px;
-          padding-right: 40px;
         }
       }
 
       img {
         @include center-block;
 
-        height: auto;
+        margin-bottom: 20px;
       }
 
       .woocommerce-loop-product__title {
@@ -48,6 +86,7 @@
         font-family: $sans;
         text-transform: uppercase;
         color: $dblue;
+        margin-bottom: 20px;
       }
 
       .price {
@@ -74,11 +113,22 @@
         del .amount {
           text-decoration: line-through;
           color: $dblue;
-          position: absolute;
-          left: 18px;
+          //position: absolute;
+          //left: 18px;
           font-weight: 300;
           font-style: italic;
         }
+      }
+
+      .onsale {
+        position: absolute;
+        color: white;
+        background-color: $lbrown;
+        padding: 5px 20px;
+
+        @include absmid( 'h' );
+
+        width: unset;
       }
 
       .button {

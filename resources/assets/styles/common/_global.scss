@@ -10,3 +10,40 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.boxed {
+  main.main {
+    max-width: 1190px;
+
+    @include center-block;
+
+    @include bp( 1, 1290 ) {
+      padding: 0 20px;
+    }
+  }
+}
+
+.woocommerce {
+  &-pagination {
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      padding: 0;
+      margin: 40px 0;
+
+      .page-numbers {
+        padding: 14px 19.71px;
+        border: 1px solid $lbrown;
+        margin: 0 5px;
+        max-width: 50px;
+        box-sizing: border-box;
+      }
+
+      .next,
+      .prev {
+        padding: 14px 16px;
+      }
+    }
+  }
+}

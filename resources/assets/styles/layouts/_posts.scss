@@ -1,22 +1,140 @@
 .post {
+  #disqus_thread,
+  .entry-content,
+  .comments {
+    max-width: 1190px;
+
+    @include center-block;
+
+    @include bp( 1 ) {
+      @include half( padding, 0, 20, 0, 20, 1 );
+    }
+
+    @include bp( 1220 ) {
+      padding: 0;
+    }
+  }
+
   .post-thumbnail {
     margin-bottom: 30px;
   }
 
-  .no-image {
-    display: block;
+  .no-post-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url( '../images/repl-img.jpg' );
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: 50% 50%;
+    opacity: 0.4;
+    background-color: $dbrown;
+    z-index: -1;
+    filter: blur( 5px );
+  }
 
-    @include bp( 1 ) {
-      width: 100%;
-      height: 220px;
+  .nocomments {
+    text-align: center;
+  }
+}
+
+.no-image {
+  display: block;
+  background-image: url( '../images/repl-img.jpg' );
+  background-size: cover;
+  background-position: 50% 50%;
+
+  @include bp( 1 ) {
+    width: 100%;
+    height: 220px;
+  }
+
+  @include bp( 1024 ) {
+    width: 550px;
+    height: 340px;
+  }
+}
+
+.prev-next-posts {
+  position: fixed;
+  top: 50%;
+  width: 300px;
+  height: 65px;
+  background-color: white;
+  box-shadow: 2px 2px 2px rgba( black, 0.35 );
+  transition: transit( all );
+
+  &:hover {
+    box-shadow: 5px 5px 5px rgba( black, 0.15 );
+  }
+
+  .content,
+  .image {
+    position: absolute;
+  }
+
+  .no-image {
+    width: 65px;
+    height: 65px !important;
+  }
+
+  .content {
+    @include absmid( 'v' );
+
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .excerpt {
+    width: 210px;
+    margin-top: 5px;
+  }
+
+  &.prev-post {
+    left: -235px;
+
+    &:hover {
+      left: 0;
     }
 
-    @include bp( 1024 ) {
-      width: 550px;
-      height: 340px;
+    .image {
+      right: 0;
+    }
+
+    .content {
+      text-align: right;
+      right: 80px;
+    }
+  }
+
+  &.next-post {
+    right: -235px;
+
+    &:hover {
+      right: 0;
+    }
+
+    .image {
+      left: 0;
+    }
+
+    .content {
+      left: 80px;
+    }
+  }
+}
+
+.single {
+  .main .post {
+    header {
+      @extend #thePageHeader;
+
+      .entry-title {
+        font-size: 60px;
+        text-transform: uppercase;
+      }
     }
   }
 }

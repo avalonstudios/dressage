@@ -1,9 +1,10 @@
 @import 'footer-widgets/latest-posts';
 
-footer {
+footer.content-info {
   background-color: $dblue;
   float: left;
   width: 100%;
+  box-sizing: border-box;
 
   @include bp( 1 ) {
     @include half( padding, 60, 40, 60, 40, 2 );
@@ -45,8 +46,13 @@ footer {
 
   .footer-credits {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+
+    @include bp( 1 ) {
+      text-align: center;
+    }
 
     &-wrapper {
       border-top: 1px solid $dbrown;
@@ -58,6 +64,20 @@ footer {
       max-width: 1190px;
 
       @include center-block;
+    }
+
+    .footer-logo {
+      @include bp( 1, 1023 ) {
+        @include center-block;
+      }
+    }
+
+    .social-menu {
+      @include bp( 1, 1023 ) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 

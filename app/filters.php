@@ -89,3 +89,8 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+/**
+ * Remove WooCommerce stylesheet
+ */
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );

@@ -56,7 +56,8 @@
     "roots/sage-lib": "~9.0.9",
     "soberwp/controller": "~2.1.0",
     "mwdelaney/sage-acf-gutenberg-blocks": "^0.4.2",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.7"
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.7",
+    "roots/sage-woocommerce": "^1.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.8.0",

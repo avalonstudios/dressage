@@ -33,7 +33,7 @@
                 "id": ""
             },
             "clone": [
-                "group_5e30271c6d383"
+                "group_5e2474966be8b"
             ],
             "display": "group",
             "layout": "block",
@@ -193,7 +193,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": 1,
     "description": "",
-    "modified": 1580927708
+    "modified": 1583078043
 }

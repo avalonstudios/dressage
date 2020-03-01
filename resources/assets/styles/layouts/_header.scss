@@ -26,3 +26,14 @@ header {
     }
   }
 }
+
+#thePageHeader {
+  text-align: center;
+  padding: 20vh 0;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}

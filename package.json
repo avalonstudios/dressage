@@ -79,6 +79,7 @@
     "animate.css": "^3.7.2",
     "jquery": "^3.3.1",
     "leaflet": "^1.6.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "tocca": "^2.0.9"
   }
 }

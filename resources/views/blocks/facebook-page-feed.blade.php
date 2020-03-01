@@ -35,6 +35,7 @@ $componentVars = [
 @endphp
 
 @component( 'comps.blocks.blocks', $componentVars )
+  {{--
   @php
   $facebook_page_title  = $flds["facebook_page_title"];
   $facebook_page_link   = $flds["facebook_page_link"];
@@ -65,7 +66,7 @@ $componentVars = [
         <a href="{{ $facebook_page_link }}">{{ $facebook_page_title }}</a>
       </blockquote>
     </div>
-  </div>
+  </div>--}}
   <!-- Place <div> tag where you want the feed to appear -->
   <div id="curator-feed-default-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
 @endcomponent

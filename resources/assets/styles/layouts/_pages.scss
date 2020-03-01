@@ -1,5 +1,81 @@
+.wrap.container {
+  margin-top: 116px;
+
+  .home & {
+    margin-top: 0;
+  }
+}
+
 .blog {
   .wrap.container {
-    margin-top: 116px;
+    max-width: 1190px;
+
+    @include center-block;
+
+    @include bp( 1 ) {
+      @include half( padding, 0, 20, 0, 20, 1 );
+    }
+
+    @include bp( 1220 ) {
+      padding: 0;
+    }
+  }
+
+  .hentry {
+    @include bp( 1 ) {
+      max-width: 550px;
+
+      @include center-block;
+    }
+
+    @include bp( 1100 ) {
+      max-width: unset;
+      float: left;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .no-image {
+      @include bp( 1100 ) {
+        width: 100%;
+      }
+    }
+
+    @include bp( 1100 ) {
+      .side {
+        &-left,
+        &-right {
+          width: 48%;
+        }
+
+        &-left {
+          float: left;
+          max-width: 550px;
+        }
+
+        &-right {
+          @include bp( 1100 ) {
+            float: right;
+            width: 48%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.archive,
+.page {
+  .page-header {
+    @extend #thePageHeader;
+
+    margin-bottom: 60px;
+
+    h1 {
+      font-size: 60px;
+      text-transform: uppercase;
+    }
   }
 }
