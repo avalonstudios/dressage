@@ -3,6 +3,11 @@
     &-breadcrumb {
       padding: 20px 0;
     }
+
+    &-message {
+      clear: both;
+      padding-top: 40px;
+    }
   }
 
   .keen {
@@ -120,7 +125,7 @@
 
       &.stock {
         &-in {
-          color: $dblue;
+          color: $lbrown;
         }
 
         &-out {
@@ -285,6 +290,16 @@
       line-height: 0;
       //background-color: $mbrown;
       color: $blue;
+    }
+  }
+
+  .products-slider-four {
+    margin: 40px 0;
+    box-shadow: inset 0 0 20px rgba( black, 0.15 );
+
+    .section-title {
+      font-size: 50px;
+      font-weight: 700;
     }
   }
 }

@@ -31,13 +31,16 @@ if ( post_password_required() ) {
 }
 
 $stockQty = $product->get_stock_quantity(  );
-if ( $stockQty >= 1 ) {
+$isInStock = $product->is_in_stock(  );
+
+if ( $stockQty >= 1 || $isInStock ) {
   $inStockClass = 'stock-in';
   $inStockText = 'in stock';
 } else {
   $inStockClass = 'stock-out';
   $inStockText = 'out of stock';
 }
+
 
 remove_action( 'woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20 );
 

@@ -6,5 +6,5 @@ $url        = $social[ 'url' ];
 @endphp
 
 <li class="social-item">
-  <a href="{{ $url }}" title="{{ $label }}"><i class="fab fa-{{ $icon }}"></i></a>
+  <a target="_blank" href="{{ $url }}" title="{{ $label }}"><i class="fab fa-{{ $icon }}"></i></a>
 </li>

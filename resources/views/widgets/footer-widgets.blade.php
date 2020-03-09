@@ -2,5 +2,5 @@
 <div class="footer-widgets">
   @php dynamic_sidebar('sidebar-footer') @endphp
 
-  @include( 'widgets.latest-posts' )
+  {{--@include( 'widgets.latest-posts' )--}}
 </div>

@@ -5,6 +5,10 @@ $args = [
 ];
 
 $pposts = get_posts( $args );
+
+if ( !$pposts ) {
+  return;
+}
 @endphp
 
 <div class="widget footer-latest-posts">
